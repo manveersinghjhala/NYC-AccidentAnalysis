@@ -1,0 +1,42 @@
+setup.template.append_fields:
+- name: Location
+  type: geo_point
+- name: Zipcode
+  type: integer
+- name: Number_of_persons_injured
+  type: integer
+- name: Number_of_persons_killed
+  type: integer
+- name: Number_of_pedestrians_injured
+  type: integer
+- name: Number_of_pedestrians_killed
+  type: integer
+- name: Number_of_cyclists_injured
+  type: integer
+- name: Number_of_cyclists_killed
+  type: integer
+- name: Number_of_motorists_injured
+  type: integer
+- name: Number_of_motorists_killed
+  type: integer
+- name: Collsion_Id
+  type: integer
+
+
+filebeat.inputs:
+- paths:
+    -  /Users/csuftitan/Desktop/project/filebeat-6.7.2-darwin-x86_64/Motor_Vehicle_Collisions_Crashes.csv
+  input_type: log
+  exclude_lines: ['^DATE']
+
+output.elasticsearch:
+ hosts: ["http://localhost:9200"]
+ pipeline: crash_pipeline
+
+
+logging.level: info
+logging.to_files: true
+logging.files:
+ name: filebeat
+ keepfiles: 7
+ permissions: 0644
