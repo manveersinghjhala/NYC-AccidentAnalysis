@@ -6,7 +6,9 @@ Steps to run -
 
 2. Intall the open source versions of elasticsearch, Kibana and Filebeat.
     Elasticsearch - https://www.docker.elastic.co/r/elasticsearch/elasticsearch-oss:6.7.2
+    
     Kibana - https://www.docker.elastic.co/r/kibana/kibana-oss:6.7.2
+    
     Filebeat - https://www.docker.elastic.co/r/beats/filebeat-oss:6.7.2
     
 3. 
