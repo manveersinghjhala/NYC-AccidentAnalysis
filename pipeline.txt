@@ -1,0 +1,83 @@
+PUT _ingest/pipeline/crash_pipeline
+{
+  "description": "nypd crash data pipleline",
+  "processors": [
+    {
+      "set": {
+        "field": "message",
+        "value": "{{message}},drop"
+      }
+    },
+    {
+      "split": {
+        "field": "message",
+        "target_field": "splitdata",
+        "separator": ","
+      }
+    },
+    {
+      "foreach": {
+        "field": "splitdata",
+        "processor": {
+          "trim": {
+            "field": "_ingest._value"
+          }
+        }
+      }
+    },
+    {
+      "script": {
+        "lang": "painless",
+        "source": "ctx.Timestamp = ctx.splitdata[0] + ' ' + ctx.splitdata[1];ctx.Borough = ctx.splitdata[2];ctx.Zipcode = ctx.splitdata[3];ctx.Latitude = ctx.splitdata[4];ctx.Longitude = ctx.splitdata[5];ctx.Loc = ctx.splitdata[6];ctx.On_street_name = ctx.splitdata[7];ctx.Cross_street_name = ctx.splitdata[8];ctx.Off_street_name = ctx.splitdata[9];ctx.Number_of_persons_injured = ctx.splitdata[10];ctx.Number_of_persons_killed = ctx.splitdata[11];ctx.Number_of_pedestrians_injured = ctx.splitdata[12];ctx.Number_of_pedestrians_killed = ctx.splitdata[13];ctx.Number_of_cyclists_injured = ctx.splitdata[14];ctx.Number_of_cyclists_killed = ctx.splitdata[15];ctx.Number_of_motorists_injured = ctx.splitdata[16];ctx.Number_of_motorists_killed = ctx.splitdata[17];ctx.Contributing_factor_vehicle_1 = ctx.splitdata[18];ctx.Contributing_factor_vehicle_2 = ctx.splitdata[19];ctx.Contributing_factor_vehicle_3 = ctx.splitdata[20];ctx.Contributing_factor_vehicle_4 = ctx.splitdata[21];ctx.Contributing_factor_vehicle_5 = ctx.splitdata[22];ctx.Collsion_Id = ctx.splitdata[23];ctx.Vehicle_type_code_1 = ctx.splitdata[24];ctx.Vehicle_type_code_2 = ctx.splitdata[25];ctx.Vehicle_type_code_3 = ctx.splitdata[26];ctx.Vehicle_type_code_4 = ctx.splitdata[27];ctx.Vehicle_type_code_5 = ctx.splitdata[28]"
+      }
+    },
+    {
+      "date": {
+        "field": "Timestamp",
+        "formats": [
+          "MM/dd/yyyy H:mm"
+        ]
+      }
+    },
+    {
+      "convert": {
+        "field": "Latitude",
+        "type": "float",
+        "ignore_failure": true
+      }
+    },
+    {
+      "convert": {
+        "field": "Longitude",
+        "type": "float",
+        "ignore_failure": true
+      }
+    },
+    {
+      "set": {
+        "if": "ctx.Latitude != '' && ctx.Latitude <= 90 && ctx.Latitude >= -90 && ctx.Longitude != '' && ctx.Longitude >= -180 &&ctx.Longitude <= 180",
+        "field": "Location",
+        "value": "{{Latitude}},{{Longitude}}"
+      }
+    },
+    {
+      "remove": {
+        "field": [
+          "Loc",
+          "Timestamp",
+          "Longitude",
+          "Latitude",
+          "splitdata"
+        ]
+      }
+    }
+  ],
+  "on_failure": [
+    {
+      "set": {
+        "field": "_index",
+        "value": "failed-{{ _index }}"
+      }
+    }
+  ]
+}
