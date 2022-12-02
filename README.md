@@ -1,5 +1,11 @@
 # NYC-AccidentAnalysis
 
+# Getting the Data
+
+
+
+
+
 Steps to run -
 
 1. Download the dataset from - [NYC Dataset](https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95)
@@ -12,6 +18,10 @@ Steps to run -
     
     Filebeat - https://www.docker.elastic.co/r/beats/filebeat-oss:6.7.2
     
-3. 
+3. Check if elasticsearch is running on http://localhost:9200/ by using the command /bin/elasticsearch
 
-4. 
+4. Check if Kibana is running on http://localhost:5601/ by using the command /bin/kibana
+
+5. Create a pipeline in Kibana Dev tab - pipeline.txt
+
+6. 
