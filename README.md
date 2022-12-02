@@ -24,6 +24,10 @@ Download the dataset from : [NYC Dataset](https://data.cityofnewyork.us/Public-S
 ## Creating a Pipeline
 Go to the development tab in Kibana and create a pipeline to ignore all the missing and incorrect values. (copy the text in pipeline.txt in the kibana dev tab).
 
+## Ingesting the data
+
+1. Add the filebeat_nypd.yml file and csv format dataset to the filebeat folder.
+2. 
 
 
 
@@ -31,22 +35,4 @@ Go to the development tab in Kibana and create a pipeline to ignore all the miss
 
 
 
-Steps to run -
 
-1. Download the dataset from - [NYC Dataset](https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95)
-
-2. Intall the open source versions of elasticsearch, Kibana and Filebeat.
-
-    Elasticsearch - https://www.docker.elastic.co/r/elasticsearch/elasticsearch-oss:6.7.2
-    
-    Kibana - https://www.docker.elastic.co/r/kibana/kibana-oss:6.7.2
-    
-    Filebeat - https://www.docker.elastic.co/r/beats/filebeat-oss:6.7.2
-    
-3. Check if elasticsearch is running on http://localhost:9200/ by using the command /bin/elasticsearch
-
-4. Check if Kibana is running on http://localhost:5601/ by using the command /bin/kibana
-
-5. Create a pipeline in Kibana Dev tab - pipeline.txt
-
-6. 
