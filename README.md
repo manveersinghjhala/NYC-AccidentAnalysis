@@ -27,7 +27,12 @@ Go to the development tab in Kibana and create a pipeline to ignore all the miss
 ## Ingesting the data
 
 1. Add the filebeat_nypd.yml file and csv format dataset to the filebeat folder.
-2. 
+2. Run filebeat and start ingesting the data into the elasticsearch.
+3. Check the Kibana tab for the records ingested and once the records have been ingested it will show information about the data.
+
+## Insights
+1. After the data has been ingested in the elasticsearch, elasticsearch will index the data.
+2. We will gain insights and create visualizations using the kibana visulaize tab. 
 
 
 
