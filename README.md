@@ -24,6 +24,7 @@ Download the dataset from : [NYC Dataset](https://data.cityofnewyork.us/Public-S
 ## Creating a Pipeline
 Go to the development tab in Kibana and create a pipeline to ignore all the missing and incorrect values. (copy the text in pipeline.txt in the kibana dev tab).
 
+
 ## Ingesting the data
 
 1. Add the filebeat_nypd.yml file and csv format dataset to the filebeat folder.
