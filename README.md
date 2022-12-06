@@ -12,12 +12,12 @@ Download the dataset from : [NYC Dataset](https://data.cityofnewyork.us/Public-S
 
 ## Kibana
 
-1. Intall the open source versions of Kibana : https://www.docker.elastic.co/r/kibana/kibana-oss:6.7.2
+1. Install the open source versions of Kibana : https://www.docker.elastic.co/r/kibana/kibana-oss:6.7.2
 2. Check if Kibana is running on http://localhost:5601/ by using the command /bin/kibana
 
 ## Filebeat
 
-1.  Intall the open source versions of Filebeat : https://www.docker.elastic.co/r/kibana/kibana-oss:6.7.2
+1.  Install the open source versions of Filebeat : https://www.docker.elastic.co/r/kibana/kibana-oss:6.7.2
 2.  We will use Filebeat to collect the data from the source and ingest it into elasticsearch for indexing.
 3.  We will also create a yml file in filebeat to create the schema for indexing and to convert our CSV format data to JSON format as elasticsearch only accepts JSON format.
 
