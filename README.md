@@ -8,7 +8,7 @@ Download the dataset from : [NYC Dataset](https://data.cityofnewyork.us/Public-S
 
 1. Install the open source version of elasticsearch : https://www.docker.elastic.co/r/elasticsearch/elasticsearch-oss:6.7.2
 2. Check if elasticsearch is running on http://localhost:9200/ by using the command /bin/elasticsearch
-3. We need to ingest our data in elasticsearch so that elasticseearch will index the data.
+3. We need to ingest our data in elasticsearch so that elasticsearch will index the data.
 
 ## Kibana
 
