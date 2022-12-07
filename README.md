@@ -35,6 +35,11 @@ Go to the development tab in Kibana and create a pipeline to ignore all the miss
 1. After the data has been ingested in the elasticsearch, elasticsearch will index the data.
 2. We will gain insights and create visualizations using the kibana visulaize tab. 
 
+Here are few examples of the insights we gained - 
+
+
+<img width="825" alt="Screen Shot 2022-11-15 at 10 01 36 AM" src="https://user-images.githubusercontent.com/69818630/206072322-6ad51d69-8aad-42f6-baf1-99badc999016.png">
+
 
 
 
