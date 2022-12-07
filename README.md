@@ -53,8 +53,8 @@ Here are few examples of the insights we gained -
 
 <img width="874" alt="Screen Shot 2022-11-15 at 9 58 36 AM" src="https://user-images.githubusercontent.com/69818630/206072846-44e087ac-13ad-4246-845a-48d3ba348218.png">
 
+5. Streets with most number of accidents:
 
-
-
+<img width="868" alt="Screen Shot 2022-11-15 at 10 00 46 AM" src="https://user-images.githubusercontent.com/69818630/206083358-171e8a5e-2d6b-423f-bdb9-246747ae521e.png">
 
 
