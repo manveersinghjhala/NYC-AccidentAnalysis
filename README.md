@@ -2,22 +2,22 @@
 
 ## Getting the Data
 
-Download the dataset from : [NYC Dataset](https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95)
+Download the dataset from: [NYC Dataset](https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95)
 
 ## Elasticsearch
 
-1. Install the open source version of elasticsearch : https://www.docker.elastic.co/r/elasticsearch/elasticsearch-oss:6.7.2
+1. Install the open source version of elasticsearch: https://www.docker.elastic.co/r/elasticsearch/elasticsearch-oss:6.7.2
 2. Check if elasticsearch is running on http://localhost:9200/ by using the command /bin/elasticsearch
 3. We need to ingest our data in elasticsearch so that elasticsearch will index the data.
 
 ## Kibana
 
-1. Install the open source versions of Kibana : https://www.docker.elastic.co/r/kibana/kibana-oss:6.7.2
+1. Install the open source versions of Kibana: https://www.docker.elastic.co/r/kibana/kibana-oss:6.7.2
 2. Check if Kibana is running on http://localhost:5601/ by using the command /bin/kibana
 
 ## Filebeat
 
-1.  Install the open source versions of Filebeat : https://www.docker.elastic.co/r/kibana/kibana-oss:6.7.2
+1.  Install the open source versions of Filebeat: https://www.docker.elastic.co/r/kibana/kibana-oss:6.7.2
 2.  We will use Filebeat to collect the data from the source and ingest it into elasticsearch for indexing.
 3.  We will also create a yml file in filebeat to create the schema for indexing and to convert our CSV format data to JSON format as elasticsearch only accepts JSON format.
 
@@ -33,7 +33,7 @@ Go to the development tab in Kibana and create a pipeline to ignore all the miss
 
 ## Insights
 1. After the data has been ingested in the elasticsearch, elasticsearch will index the data.
-2. We will gain insights and create visualizations using the kibana visulaize tab. 
+2. We will gain insights and create visualizations using the kibana visualize tab. 
 
 Here are few examples of the insights we gained - 
 
