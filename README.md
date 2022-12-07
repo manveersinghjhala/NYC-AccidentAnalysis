@@ -57,4 +57,7 @@ Here are few examples of the insights we gained -
 
 <img width="868" alt="Screen Shot 2022-11-15 at 10 00 46 AM" src="https://user-images.githubusercontent.com/69818630/206083358-171e8a5e-2d6b-423f-bdb9-246747ae521e.png">
 
+6. A snapshot of our dashboard:
+
+<img width="1440" alt="Screen Shot 2022-11-15 at 10 13 53 AM" src="https://user-images.githubusercontent.com/69818630/206083494-89a8fc8e-ba26-497b-9652-fe07772ccc0b.png">
 
