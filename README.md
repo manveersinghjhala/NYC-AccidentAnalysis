@@ -45,6 +45,13 @@ Here are few examples of the insights we gained -
 
 <img width="860" alt="Screen Shot 2022-11-15 at 9 59 57 AM" src="https://user-images.githubusercontent.com/69818630/206072493-88d2c62d-0bc9-400d-b346-20873c2bc80f.png">
 
+3. Type of vehicles that are involved in most accidents:
+
+<img width="894" alt="Screen Shot 2022-11-15 at 9 57 35 AM" src="https://user-images.githubusercontent.com/69818630/206072708-87cf667c-6160-4f64-959e-042e1e016ad3.png">
+
+4. Areas where most number of accidents occur:
+
+<img width="874" alt="Screen Shot 2022-11-15 at 9 58 36 AM" src="https://user-images.githubusercontent.com/69818630/206072846-44e087ac-13ad-4246-845a-48d3ba348218.png">
 
 
 
