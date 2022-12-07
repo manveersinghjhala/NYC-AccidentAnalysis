@@ -37,9 +37,13 @@ Go to the development tab in Kibana and create a pipeline to ignore all the miss
 
 Here are few examples of the insights we gained - 
 
+1. Major causes of accidents:
 
 <img width="825" alt="Screen Shot 2022-11-15 at 10 01 36 AM" src="https://user-images.githubusercontent.com/69818630/206072322-6ad51d69-8aad-42f6-baf1-99badc999016.png">
 
+2. Major hotspots of accidents:
+
+<img width="860" alt="Screen Shot 2022-11-15 at 9 59 57 AM" src="https://user-images.githubusercontent.com/69818630/206072493-88d2c62d-0bc9-400d-b346-20873c2bc80f.png">
 
 
 
